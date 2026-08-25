@@ -1,0 +1,22 @@
+# Docker compose file for initializing ROBO.400 environment
+# 
+#   - Ubuntu 22.04 Jammy 
+#   - ROS2 Humble 
+#
+
+services:
+  ros2cont:
+    tty: true 
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: robo400    # identifier
+    volumes:
+      - ./ros2env/src:/up/ros2env/src      # bind the directories 
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw   # enable cv2 tools 
+    devices:
+      - /dev/snd:/dev/snd
+    environment:
+      - DISPLAY=$DISPLAY    # env. variable for display
+volumes: 
+  ros2cont:
