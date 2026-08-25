@@ -126,7 +126,8 @@ For more details, see [Docker documentation](https://docs.docker.com/reference/d
 Let's review some details from `docker-compose.yml`
 
 `volumes:` binds directories. In this case, docker will bind the directory which we earlier created, `./ros2env/src`, to container's directory `/up/ros2env/src`. In practice, whatever you add and modify within the `./ros2env/src` directory, exists within the container.
-**NOTE**: This workspace setup assumes, you *DO NOT* modify the files directly within the container, by e.g., using bash. If you remove the file within container, you will lose the files! Always modify the files within the VS code explorer / other editor of preference. 
+
+**NOTE**: This workspace setup assumes, you *DO NOT* modify the files directly within the container, by e.g., using bash. If you remove the file within container, you will lose it! Always modify the files within the VS code explorer / editor of preference / windows file explorer. 
 
 `dockerfile: Dockerfile` determines the file to be used, by default we use the `Dockerfile` provided in the repository. In case you want to use some other file and experiment, you can change the name here.
 
@@ -174,6 +175,8 @@ source dbash.sh
 
 Now, within the docker interactive terminal, install ROS2 using the [tutorials provided in ROS2 Humble documentation](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html). 
 
+**Note: You can copy-paste the commands, and do not need `sudo`**
+
 **Note: Keep the docker container running during the task.**
 
 ## TASK 2: 
@@ -198,4 +201,4 @@ Retry the given `Talker-Listener` nodes given in the [ROS2 documentation](https:
 
 ## TASK 3: 
 
-One caveat with docker is, when you download new images they take a lot of space. It is better to free space proactively, when previously used images become unused - in this case, the image that we previously downloaded with line `FROM ubuntu:22.04`. Either use the Docker Desktop, to remove the images or use command line to do so (How? It is your task to find out!).
+One caveat with docker is, when you download new images they take a lot of space. It is better to free space proactively, when previously downloaded images become unused - in this case, the image we downloaded with line `FROM ubuntu:22.04`. Either use Docker Desktop or command line to remove the image (How? It is your task to find out!).
