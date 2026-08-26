@@ -206,3 +206,7 @@ Retry the given `Talker-Listener` nodes given in the [ROS2 documentation](https:
 ## TASK 3: Remove unused images 
 
 One caveat with docker is, when you download new images they take a lot of space. It is better to free space proactively, when previously downloaded images become unused - in this case, the image we downloaded with line `FROM ubuntu:22.04`. Either use Docker Desktop or command line to remove the image (How? It is your task to find out!).
+
+## Exercise 1 tips
+
+- When working on [Colcon Tutorial](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html), you have to create a `src` directory -> You can consider this step already done, you will find the folder within the docker in directory `/up/ros2env/src`. 
