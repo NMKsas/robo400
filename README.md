@@ -37,8 +37,9 @@ sudo apt update && sudo apt upgrade -y
 sudo apt-get install wget ca-certificates
 ```
 
-Next, clone the course repository 
+Next, navigate to home directory and clone the course repository 
 ```bash
+cd
 git clone https://github.com/NMKsas/robo400.git
 ```
 
