@@ -14,8 +14,6 @@ services:
     volumes:
       - ./ros2env/src:/up/ros2env/src      # bind the directories 
       - /tmp/.X11-unix:/tmp/.X11-unix:rw   # enable cv2 tools 
-    devices:
-      - /dev/snd:/dev/snd
     environment:
       - DISPLAY=$DISPLAY    # env. variable for display
 volumes: 
