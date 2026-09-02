@@ -83,6 +83,35 @@ code .
 
 For more information, see [tutorials](https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode) by microsoft. 
 
+### Connecting USB devices (webcam)
+
+See [documentation by Microsoft](https://learn.microsoft.com/en-us/windows/wsl/connect-usb) to connect USB devices, 
+in this case a webcam, to WSL2. 
+
+After installation, open Power Shell as Administrator. Find the web camera, and bind/attach the bus id to WSL2. 
+
+```powershell
+# get list of USB devices
+usbipd list
+
+# Example print:
+# ==============
+# Connected:
+# BUSID       VID:PID    DEVICE                                       STATE
+# <bus_id>    <vid:pid>  Integrated Webcam                       Not shared
+# ...
+
+# replace <bus_id> with the desired ID from the list 
+usbipd bind --busid <bus_id>
+usbipd attach --wsl --busid <bus_id>
+```
+
+Verify within the WSL2 terminal 
+```bash
+lsusb
+# Example print: 
+# Bus 001 Device 001: ID <vid:pid> Integrated_Webcam
+```
 
 ## Getting started 
 
