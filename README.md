@@ -163,7 +163,28 @@ Let's review some details from `docker-compose.yml`
 
 `dockerfile: Dockerfile` determines the file to be used, by default we use the `Dockerfile` provided in the repository. In case you want to use some other file and experiment, you can change the name here.
 
-The rest are setup for enabling GUIs / visual interfaces. For more information, see [Docker documentation](https://docs.docker.com/reference/compose-file/). 
+For porting the USB devices for video, we usually need to add few lines for each camera.
+
+```bash
+# first, see the locations for each camera
+ls /dev/video* 
+
+# Example print: 
+# /dev/video0  /dev/video1  /dev/video2  /dev/video3
+```
+
+Update the `docker-compose.yml` file to include `devices` section. 
+The current file has the lines commented out.  
+
+```
+    devices:
+        - /dev/video0:/dev/video0
+        - /dev/video0:/dev/video1
+        - /dev/video0:/dev/video2
+        - /dev/video0:/dev/video3
+```
+
+The rest of the configurations are setup for enabling GUIs / visual interfaces. For more information, see [Docker documentation](https://docs.docker.com/reference/compose-file/). 
 
 
 ### Running the container 
