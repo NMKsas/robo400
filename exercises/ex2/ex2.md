@@ -25,7 +25,7 @@ man apt-get
 man apt 
 ```
 
-Now, try to find out what is the difference between `apt update` and `apt upgrade` commands? 
+**Find out what is the difference between `apt update` and `apt upgrade` commands?** 
 
 ## TASK 2: Modify `Dockerfile` to install Gazebo to your container
 
@@ -78,7 +78,7 @@ sudo apt-get update
 sudo apt-get install ignition-fortress
 ```
 
-Modify the `Dockerfile` to perform the necessary installations. 
+**Modify the `Dockerfile` to perform the necessary installations.**
 
 ## Exercise tips:
 
