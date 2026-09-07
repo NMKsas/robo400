@@ -235,4 +235,5 @@ Recommended way to work:
 1. Read the instruction file, e.g., [`exercises/ex1/ex1.md`](exercises/ex1/ex1.md).
 2. Modify the [Dockerfile](/Dockerfile) located at the root of your wsl workspace (`~/robo400`) according to the task instructions
 3. Trial and error - test if the changes you made in `Dockerfile` work with `docker compose up`
-4. Check the right answers from the corresponding Dockerfile, e.g. [exercises/ex1/Dockerfile](exercises/ex1/Dockerfile). 
+4. Check the right answers from the corresponding Dockerfile, e.g. [exercises/ex1/Dockerfile](exercises/ex1/Dockerfile).
+5. Proceed to given exercises using the docker environment & interactive terminals 
