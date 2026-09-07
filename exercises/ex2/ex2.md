@@ -64,7 +64,7 @@ After this operation, 22.5 kB of additional disk space will be used. Do you want
 
 In `Dockerfile` we also have to use `&&` for chaining the commands into one `RUN` instruction. `\` is used for line break.
 
-Let's move to Gazebo installation. The instruction page gives use the following: 
+Let's move to Gazebo installation. [Gazebo installation page](https://gazebosim.org/docs/fortress/install_ubuntu/) gives use the following commands to install the necessary packages: 
 
 ```bash
 sudo apt-get update
