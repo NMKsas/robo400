@@ -1,0 +1,28 @@
+FROM ros:humble
+
+RUN apt update && \
+    DEBIAN_FRONTEND=noninteractive apt install -y \
+    python3-pip \
+    python3-venv \
+    apt clean && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN mkdir -p /up/ros2env/src/
+COPY /json_files /up/ros2env/example_files
+COPY requirements.txt /up/ros2env
+WORKDIR /up/ros2env
+
+SHELL ["/bin/bash", "-c"]
+
+# python environment setup
+RUN . /opt/ros/${ROS_DISTRO}/setup.bash && \
+    python3 -m venv .venv --system-site-packages && \
+    . .venv/bin/activate && \
+    python3 -m pip install --no-cache-dir -r requirements.txt
+
+RUN rm requirements.txt
+
+RUN apt-get update && apt-get install -y \
+      ros-${ROS_DISTRO}-demo-nodes-cpp \
+      ros-${ROS_DISTRO}-demo-nodes-py && \
+    rm -rf /var/lib/apt/lists/*
