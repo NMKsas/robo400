@@ -80,8 +80,14 @@ sudo apt-get install ignition-fortress
 
 Modify the `Dockerfile` to perform the necessary installations.
 
+## TASK 3: Modify `Dockerfile` to include ROS integration for Gazebo 
+
+As the exercise 2.3 specifies, you need to install packages to run ROS integration for Gazebo.
+Update the Dockerfile to include the specified [installations](https://github.com/gazebosim/ros_gz/tree/humble#install). 
+
 ## Exercise tips:
 
 - If the world model you create on Gazebo doesn't allow you to save the file, add `.sdf` postfix to the file name
 - If you cannot save the file after modifications on VS Code, it is likely due to ownership issues: the file created within the container is owned by the container user. Change the rights of the whol directory, e.g., `ros2env/src` using wsl terminal, `sudo chown -R <your_username> ~/robo400/ros2env/src`
-- If you are using Ubuntu and GUIs won't launch, allow docker to connect X server with command `xhost +local:docker` on your local terminal. After you are done with your exercises, prevent the access with `xhost -local:docker`. 
+- If you are using Ubuntu and GUIs won't launch, allow docker to connect X server with command `xhost +local:docker` on your local terminal. After you are done with your exercises, prevent the access with `xhost -local:docker`
+- When building new containers, remember to remove unused images/containers, which tend to take a lot of space 
