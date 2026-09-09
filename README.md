@@ -237,3 +237,7 @@ Recommended way to work:
 3. Trial and error - test if the changes you made in `Dockerfile` work with `docker compose up`
 4. Check the right answers from the corresponding Dockerfile, e.g. [exercises/ex1/Dockerfile](exercises/ex1/Dockerfile).
 5. Proceed to given exercises using the docker environment & interactive terminals 
+
+# General tips: 
+
+- in case you cannot modify the files within the local VS Code, change the ownership in your wsl terminal: `sudo chown -R <your_username> ~/robo400/ros2env/src`
