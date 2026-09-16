@@ -157,7 +157,7 @@ For more details, see [Docker documentation](https://docs.docker.com/reference/d
 
 Let's review some details from `docker-compose.yml`
 
-`volumes:` binds directories. In this case, docker will bind the directory which we earlier created, `./ros2env/src`, to container's directory `/up/ros2env/src`. In practice, whatever you add and modify within the `./ros2env/src` directory, exists within the container.
+`volumes:` binds directories. In this case, docker will bind the directory which we earlier created, `./ros2env/src`, to container's directory `/up/ros2env/src`. In practice, whatever you add and modify within your **local** `./ros2env/src` directory, exists within the container.
 
 **NOTE**: This workspace setup assumes, you *DO NOT* modify the files directly within the container, by e.g., using bash. If you remove the file within container, you will lose it! Always modify the files within the VS code explorer / editor of preference / windows file explorer. 
 
