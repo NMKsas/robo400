@@ -5,7 +5,7 @@ This repository contains instructions and docker files for setting up a ROS2 env
 - Ubuntu 22.04 Jammy
 - ROS2 Humble distribution
 
-There are a lot of guides and instructions on how to setup your local development environment (see e.g., [this repository](https://github.com/espenakk/ros2-wsl2-guide)). While this course provides one way of work, you can freely browse other options and setups, as long as you get demos done! Find ways that work for you. The docker files should work similarly on Ubuntu environment, after installing Docker engine. 
+There are a lot of guides and instructions on how to setup your local development environment (see e.g., [this repository](https://github.com/espenakk/ros2-wsl2-guide)). While this course provides one way of work, you can freely browse other options and setups, as long as you get demos done! Find ways that work for you. **The docker files should work similarly on Ubuntu environment, after installing Docker engine.** 
 
 **Note: this repository and docker files are designed to be used locally, for studying purposes - not for deployment. There is a lot of information about Docker and its [secure usage](https://docs.docker.com/engine/security/), and this course does not go into details regarding that. If and when you experiment on your own, be mindful of the security risks!**
 
